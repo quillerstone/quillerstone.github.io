@@ -17,12 +17,12 @@
 <meta property="og:site_name" content="Ziqu Blog">
 <meta property="og:description" content="分享生活 分享快乐!从网页抓取字符特别是在网页的表格中获取的字符，里面有固定的中文时间格式，比如：”11月28日（周二）上午9：30”。需要转为其他格式，比如：“2017/11/28” 和 “9:30:00”，下面介绍如何用Python完成转换。  123456789101112131415import re #字符集范围中文[\u4e00-\u9fa5],标点符号\uff00-\uffef]s">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://cdn.dribbble.com/users/10549/screenshots/3306057/workstation.png">
-<meta property="og:updated_time" content="2017-11-30T10:42:07.874Z">
+<meta property="og:image" content="https://cdn.dribbble.com/users/241205/screenshots/3906737/python.jpg">
+<meta property="og:updated_time" content="2017-11-30T10:48:52.779Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用Python获得字符串中的日期">
 <meta name="twitter:description" content="分享生活 分享快乐!从网页抓取字符特别是在网页的表格中获取的字符，里面有固定的中文时间格式，比如：”11月28日（周二）上午9：30”。需要转为其他格式，比如：“2017/11/28” 和 “9:30:00”，下面介绍如何用Python完成转换。  123456789101112131415import re #字符集范围中文[\u4e00-\u9fa5],标点符号\uff00-\uffef]s">
-<meta name="twitter:image" content="https://cdn.dribbble.com/users/10549/screenshots/3306057/workstation.png">
+<meta name="twitter:image" content="https://cdn.dribbble.com/users/241205/screenshots/3906737/python.jpg">
     
 
     
@@ -171,7 +171,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="https://cdn.dribbble.com/users/10549/screenshots/3306057/workstation.png" alt=" "></p>
+            <p><img src="https://cdn.dribbble.com/users/241205/screenshots/3906737/python.jpg" alt=" "></p>
 <h2 id="分享生活-分享快乐"><a href="#分享生活-分享快乐" class="headerlink" title="分享生活 分享快乐!"></a>分享生活 分享快乐!</h2><p>从网页抓取字符特别是在网页的表格中获取的字符，里面有固定的中文时间格式，比如：”11月28日（周二）上午9：30”。需要转为其他格式，比如：“2017/11/28” 和 “9:30:00”，下面介绍如何用Python完成转换。</p>
 <hr>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> re</div><div class="line"> <span class="comment">#字符集范围中文[\u4e00-\u9fa5],标点符号\uff00-\uffef]</span></div><div class="line">str = <span class="string">"11月28日（周二）上午9：30"</span></div><div class="line"> <span class="comment">#把非数字用正则表达式；</span></div><div class="line">regx = <span class="string">"\D"</span></div><div class="line">pattern = re.compile(regx)</div><div class="line"> <span class="comment">#非数字用斜杠代替结果为u'11/28/////9/30'；</span></div><div class="line">results = pattern.sub(<span class="string">r'/'</span>,str)</div><div class="line"> <span class="comment">#转换为数组结果为[11, 28, 9, 30]；</span></div><div class="line">result_list = results.split(<span class="string">'/'</span>)</div><div class="line">nums_list = [num <span class="keyword">for</span> num <span class="keyword">in</span> results_list <span class="keyword">if</span> num]</div><div class="line"> <span class="comment">#获取日期字符串2017/11/28；</span></div><div class="line">str1 = <span class="string">'2017/'</span>+(<span class="string">'/'</span>).join(list1[:<span class="number">2</span>])</div><div class="line"> <span class="comment">#获取时间字符串9:30:00；</span></div><div class="line">str2 = (<span class="string">':'</span>).join(list1[<span class="number">-2</span>:]) + <span class="string">':00'</span></div></pre></td></tr></table></figure>
@@ -308,7 +308,7 @@
                             <a href="/2017/11/28/2017-11-28/" class="thumbnail">
     
     
-        <span style="background-image:url(https://cdn.dribbble.com/users/10549/screenshots/3306057/workstation.png)" alt="利用Python获得字符串中的日期" class="thumbnail-image"></span>
+        <span style="background-image:url(https://cdn.dribbble.com/users/241205/screenshots/3906737/python.jpg)" alt="利用Python获得字符串中的日期" class="thumbnail-image"></span>
     
     
 </a>
