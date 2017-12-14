@@ -3,21 +3,26 @@
 <head>
     <meta charset="utf-8">
     
-    <title>tags | Ziqu Blog</title>
+    <title>EDX自定义Theme | Ziqu Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="Technology,Life,Edu">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://quyanwei.cn/tags/index.html">
+        <meta name="keywords" content="edx" />
+    
+    <meta name="description" content="Edx平台初步设置 virusalbox  ubuntu 模式，网络选择NAT模式； sudo vi /etc/network/interfaces 把网络地址部分全部都注释掉即： auto eth0；#此处eth0在ubuntu16.04中为enp0s17,利用ifconig -a可以查询；iface enp0s17 inet dhcp #此处由static 改为 dhcp；注释掉静态地址和子">
+<meta name="keywords" content="edx">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EDX自定义Theme">
+<meta property="og:url" content="https://quyanwei.cn/2017/12/14/2017-12-14/index.html">
 <meta property="og:site_name" content="Ziqu Blog">
-<meta property="og:description" content="Technology,Life,Edu">
+<meta property="og:description" content="Edx平台初步设置 virusalbox  ubuntu 模式，网络选择NAT模式； sudo vi /etc/network/interfaces 把网络地址部分全部都注释掉即： auto eth0；#此处eth0在ubuntu16.04中为enp0s17,利用ifconig -a可以查询；iface enp0s17 inet dhcp #此处由static 改为 dhcp；注释掉静态地址和子">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-09-29T06:06:02.089Z">
+<meta property="og:image" content="https://cdn.dribbble.com/users/886708/screenshots/3941931/edx.png">
+<meta property="og:updated_time" content="2017-12-14T10:23:14.697Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="Technology,Life,Edu">
+<meta name="twitter:title" content="EDX自定义Theme">
+<meta name="twitter:description" content="Edx平台初步设置 virusalbox  ubuntu 模式，网络选择NAT模式； sudo vi /etc/network/interfaces 把网络地址部分全部都注释掉即： auto eth0；#此处eth0在ubuntu16.04中为enp0s17,利用ifconig -a可以查询；iface enp0s17 inet dhcp #此处由static 改为 dhcp；注释掉静态地址和子">
+<meta name="twitter:image" content="https://cdn.dribbble.com/users/886708/screenshots/3941931/edx.png">
     
 
     
@@ -130,34 +135,68 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <em class="page-title-link" data-url="/tags/index.html">tags</em>
+    <a class="page-title-link" href="/categories/archives/">archives</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="page-" class="article article-single article-type-page" itemscope itemprop="blogPost">
+                            <article id="post-2017-12-14" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        tags
+        EDX自定义Theme
         </h1>
     
 
             </header>
         
         
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2017/12/14/2017-12-14/" class="article-date">
+            <time datetime="2017-12-14T10:57:00.000Z" itemprop="datePublished">2017-12-14</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/edx/">edx</a>
+    </div>
+
+            </div>
+        
         
         <div class="article-entry" itemprop="articleBody">
-            
+            <p><img src="https://cdn.dribbble.com/users/886708/screenshots/3941931/edx.png" alt=" "></p>
+<h3 id="Edx平台初步设置"><a href="#Edx平台初步设置" class="headerlink" title="Edx平台初步设置"></a>Edx平台初步设置</h3><ol>
+<li>virusalbox  ubuntu 模式，网络选择NAT模式；</li>
+<li>sudo vi /etc/network/interfaces</li>
+<li>把网络地址部分全部都注释掉即：<blockquote>
+<p>auto eth0；#此处eth0在ubuntu16.04中为enp0s17,利用ifconig -a可以查询；<br>iface enp0s17 inet dhcp #此处由static 改为 dhcp；<br>注释掉静态地址和子网掩码；</p>
+</blockquote>
+</li>
+<li>网站初始化设置：<blockquote>
+<p>学生界面<a href="http://your_ip/" target="_blank" rel="external">http://your_ip/</a>;<br>教师课程内容编辑界面<a href="http://your_ip:18010" target="_blank" rel="external">http://your_ip:18010</a>;<br>教师账号：staff@example.com / edx;<br>verified@example.com / edx;<br>audit@example.com / edx;<br>学生账号：honor@example.com / edx;</p>
+<h3 id="Theme目录结构"><a href="#Theme目录结构" class="headerlink" title="Theme目录结构:"></a>Theme目录结构:</h3><p>/haue-theme/edx-platform/zyhj-theme/lms/static/images<br>/haue-theme/edx-platform/zyhj-theme/lms/static/sass<br>/haue-theme/edx-platform/zyhj-theme/lms/templates</p>
+<ul>
+<li>sudo chown -R edxapp:edxapp /my-open-edx-themes #权限赋予edxapp用户</li>
+<li>sudo chmod -R u+rw /my-open-edx-themes<br>/edx/app/edxapp/lms.env.json 设置 “ENABLE_COMPREHENSIVE_THEMING”: true<br>LMS, add the path to COMPREHENSIVE_THEME_DIRS in /edx/app/edxapp/lms.env.json.<br>“COMPREHENSIVE_THEME_DIRS”: [“/haue-theme/edx-platform”]<br>重启所由服务；<h3 id="设置应用Theme"><a href="#设置应用Theme" class="headerlink" title="设置应用Theme"></a>设置应用Theme</h3>登陆django管理后台；#<a href="http://your_url/admin" target="_blank" rel="external">http://your_url/admin</a><br>选择Site themes;<br>从Site选择需要应用theme的网站;<br>在Theme dir name填入theme名称；#例如zyhj-theme<h3 id="编译Theme"><a href="#编译Theme" class="headerlink" title="编译Theme"></a>编译Theme</h3>cd /edx/app/edxapp/edx-platform；<br>sudo -H -u edxapp bash<br>source /edx/app/edxapp/edxapp_env #重要步骤不能缺少；<br>cd /edx/app/edxapp/edx-platform<br>paver update_assets lms –settings=aws<br>sudo /edx/bin/supervisorctl restart edxapp:<br>sudo /edx/bin/supervisorctl restart edxapp_worker:<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><a href="http://edx.readthedocs.io/projects/edx-installing-configuring-and-running/en/open-release-ginkgo.master/configuration/changing_appearance/theming/index.html" target="_blank" rel="external"> Changing Themes for an Open edX Site</a></li>
+</ul>
+</blockquote>
+</li>
+</ol>
+
         </div>
         <footer class="article-footer">
             
 
 
 
-    <a data-url="https://quyanwei.cn/tags/index.html" data-id="cjb6c2wxi0002t4i5ypzgnk0n" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="https://quyanwei.cn/2017/12/14/2017-12-14/" data-id="cjb6c2wxc0001t4i5rhi2j7qu" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -250,6 +289,19 @@
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/11/28/2017-11-28/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">利用Python获得字符串中的日期</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -407,7 +459,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://quyanwei.cn/tags/index.html';
+    var disqus_url = 'https://quyanwei.cn/2017/12/14/2017-12-14/';
     
     (function() {
     var dsq = document.createElement('script');

@@ -3,23 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Ziqu Blog</title>
+    <title>标签：: edx | Ziqu Blog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="" />
-    
-    <meta name="description" content="Edx_Custom_Themes Edx平台初步设置 virusalbox  ubuntu 模式，网络选择NAT模式； sudo vi /etc/network/interfaces 把网络地址部分全部都注释掉即： auto eth0；#此处eth0在ubuntu16.04中为enp0s17,利用ifconig -a可以查询；iface enp0s17 inet dhcp #此处由static">
-<meta property="og:type" content="article">
+    <meta name="description" content="Technology,Life,Edu">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Ziqu Blog">
-<meta property="og:url" content="https://quyanwei.cn/2017/12/07/2017-12-14/index.html">
+<meta property="og:url" content="https://quyanwei.cn/tags/edx/index.html">
 <meta property="og:site_name" content="Ziqu Blog">
-<meta property="og:description" content="Edx_Custom_Themes Edx平台初步设置 virusalbox  ubuntu 模式，网络选择NAT模式； sudo vi /etc/network/interfaces 把网络地址部分全部都注释掉即： auto eth0；#此处eth0在ubuntu16.04中为enp0s17,利用ifconig -a可以查询；iface enp0s17 inet dhcp #此处由static">
+<meta property="og:description" content="Technology,Life,Edu">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-08T01:32:04.770Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ziqu Blog">
-<meta name="twitter:description" content="Edx_Custom_Themes Edx平台初步设置 virusalbox  ubuntu 模式，网络选择NAT模式； sudo vi /etc/network/interfaces 把网络地址部分全部都注释掉即： auto eth0；#此处eth0在ubuntu16.04中为enp0s17,利用ifconig -a可以查询；iface enp0s17 inet dhcp #此处由static">
+<meta name="twitter:description" content="Technology,Life,Edu">
     
 
     
@@ -132,137 +129,78 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    未分类
+    <i class="icon fa fa-tag"></i>标签：: <em>edx</em>
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-2017-12-14" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2017/12/07/2017-12-14/" class="article-date">
-            <time datetime="2017-12-07T10:53:10.582Z" itemprop="datePublished">2017-12-07</time>
-        </a>
-    </div>
+                            
 
-                
+    
+    
+        
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2017" class="archive-year"><i class="icon fa fa-calendar-o"></i>2017</a>
             </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
         
+        <a href="/2017/12/14/2017-12-14/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://cdn.dribbble.com/users/886708/screenshots/3941931/edx.png)" alt="EDX自定义Theme" class="thumbnail-image"></span>
+    
+    
         
-        <div class="article-entry" itemprop="articleBody">
-            <h1 id="Edx-Custom-Themes"><a href="#Edx-Custom-Themes" class="headerlink" title="Edx_Custom_Themes"></a>Edx_Custom_Themes</h1><hr>
-<h3 id="Edx平台初步设置"><a href="#Edx平台初步设置" class="headerlink" title="Edx平台初步设置"></a>Edx平台初步设置</h3><ol>
-<li>virusalbox  ubuntu 模式，网络选择NAT模式；</li>
-<li>sudo vi /etc/network/interfaces</li>
-<li>把网络地址部分全部都注释掉即：<blockquote>
-<p>auto eth0；#此处eth0在ubuntu16.04中为enp0s17,利用ifconig -a可以查询；<br>iface enp0s17 inet dhcp #此处由static 改为 dhcp；<br>注释掉静态地址和子网掩码；</p>
-</blockquote>
-</li>
-<li>网站初始化设置：<blockquote>
-<p>学生界面<a href="http://your_ip/" target="_blank" rel="external">http://your_ip/</a>;<br>教师课程内容编辑界面<a href="http://your_ip:18010" target="_blank" rel="external">http://your_ip:18010</a>;<br>教师账号：staff@example.com / edx;<br>verified@example.com / edx;<br>audit@example.com / edx;<br>学生账号：honor@example.com / edx;</p>
-<h3 id="Theme目录结构"><a href="#Theme目录结构" class="headerlink" title="Theme目录结构:"></a>Theme目录结构:</h3><p>/my-open-edx-themes/edx-platform/my-theme/lms/static/images<br>/my-open-edx-themes/edx-platform/my-theme/lms/static/sass<br>/my-open-edx-themes/edx-platform/my-theme/lms/templates</p>
-<ul>
-<li>sudo chown -R edxapp:edxapp /my-open-edx-themes #权限赋予edxapp用户</li>
-<li>sudo chmod -R u+rw /my-open-edx-themes</li>
-<li>/edx/app/edxapp/lms.env.json 设置 “ENABLE_COMPREHENSIVE_THEMING”: true<br><code>LMS, add the path to COMPREHENSIVE_THEME_DIRS in /edx/app/edxapp/lms.env.json.
-&quot;COMPREHENSIVE_THEME_DIRS&quot;: [
-&quot;/my-open-edx-themes/edx-platform&quot;
-]</code><h3 id="如何使用edx-bootstrap-theme"><a href="#如何使用edx-bootstrap-theme" class="headerlink" title="如何使用edx-bootstrap-theme"></a>如何使用edx-bootstrap-theme</h3></li>
-</ul>
-</blockquote>
-</li>
-<li>sudo apt-get install git #安装git;</li>
-<li>git clone <a href="https://github.com/dadasoz/edx-bootstrap-theme.git" target="_blank" rel="external">https://github.com/dadasoz/edx-bootstrap-theme.git</a></li>
-<li>sudo apt-get install python-paver #有时候需要安装这个程序；</li>
-<li>打开’/edx/app/edxapp/lms.env.json’ and edit COMPREHENSIVE_THEME_DIR to /edx/app/edxapp/edx-platform/themes/edx-bootstrap-theme #此处填写实际了路径；</li>
-<li><blockquote>
-<p>cd /edx/app/edxapp/edx-platform；<br>sudo -H -u edxapp bash<br>source /edx/app/edxapp/edxapp_env #重要步骤不能缺少；<br>cd /edx/app/edxapp/edx-platform<br>paver update_assets cms –settings=aws<br>paver update_assets lms –settings=aws<br>sudo /edx/bin/supervisorctl restart edxapp:<br>sudo /edx/bin/supervisorctl restart edxapp_worker:</p>
-</blockquote>
-</li>
-</ol>
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="https://quyanwei.cn/2017/12/14/2017-12-14/">0</span>
+    
+</span>
 
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/archives/">archives</a>
+            </div>
+            <div class="date"><time datetime="2017-12-14T10:57:00.000Z" itemprop="datePublished">2017-12-14</time></div>
         </div>
-        <footer class="article-footer">
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2017/12/14/2017-12-14/">EDX自定义Theme</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
             
-
-
-
-    <a data-url="https://quyanwei.cn/2017/12/07/2017-12-14/" data-id="cjb6c2wxc0001t4i5rhi2j7qu" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
-<script>
-    (function ($) {
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-        </footer>
+Edx平台初步设置
+virusalbox  ubuntu 模式，网络选择NAT模式；
+sudo vi /etc/network/interfaces
+把网络地址部分全部都注释掉即：
+auto eth0；#此处eth0在ubuntu16.04中为enp0s17,利用ifconig -a可以查询；iface enp0s17 inet dhcp #此处由static 改为 dhcp；注释掉静态地址和子
+        </p>
     </div>
 </article>
-
-    <section id="comments">
     
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
+        </div>
     
-    </section>
+
+
+    </div></section>
+
 
 
                         </div>
@@ -284,19 +222,6 @@
         </ul>
     </div>
     
-        
-<nav id="article-nav">
-    
-    
-        <a href="/2017/11/28/2017-11-28/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">上一篇</strong>
-        <p class="article-nav-title">利用Python获得字符串中的日期</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
-    
     <div class="widgets-container">
         
             
@@ -309,10 +234,10 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2017/12/07/2017-12-14/" class="thumbnail">
+                            <a href="/2017/12/14/2017-12-14/" class="thumbnail">
     
     
-        <span class="thumbnail-image thumbnail-none"></span>
+        <span style="background-image:url(https://cdn.dribbble.com/users/886708/screenshots/3941931/edx.png)" alt="EDX自定义Theme" class="thumbnail-image"></span>
     
     
 </a>
@@ -320,9 +245,9 @@
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2017/12/07/2017-12-14/" class="title"></a></p>
-                            <p class="item-date"><time datetime="2017-12-07T10:53:10.582Z" itemprop="datePublished">2017-12-07</time></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/archives/">archives</a></p>
+                            <p class="item-title"><a href="/2017/12/14/2017-12-14/" class="title">EDX自定义Theme</a></p>
+                            <p class="item-date"><time datetime="2017-12-14T10:57:00.000Z" itemprop="datePublished">2017-12-14</time></p>
                         </div>
                     </li>
                 
@@ -375,7 +300,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/archives/">archives</a><span class="category-list-count">2</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/archives/">archives</a><span class="category-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -395,7 +320,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/edx/">edx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -405,7 +330,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/python/" style="font-size: 10px;">python</a>
+            <a href="/tags/edx/" style="font-size: 10px;">edx</a> <a href="/tags/life/" style="font-size: 10px;">life</a> <a href="/tags/python/" style="font-size: 10px;">python</a>
         </div>
     </div>
 
@@ -453,13 +378,11 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'https://quyanwei.cn/2017/12/07/2017-12-14/';
-    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
